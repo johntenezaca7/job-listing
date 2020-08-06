@@ -1,5 +1,6 @@
 import React from "react";
 import { JobItemStyles } from "./styles";
+import PropTypes from 'prop-types';
 
 function JobItem({ job, handleSetTags }) {
   const {
@@ -55,5 +56,10 @@ function JobItem({ job, handleSetTags }) {
     </JobItemStyles>
   );
 };
+
+JobItem.propTypes = {
+  job: PropTypes.array.isRequired,
+  handleSetTags: PropTypes.func.isRequired
+}.isRequired;
 
 export { JobItem };

@@ -1,6 +1,7 @@
 import React from "react";
 import RemoveItemSvg from "./images/icon-remove.svg";
 import { FilterContainerStyles } from "./styles";
+import PropTypes from 'prop-types';
 
 function FilteredItem({text, handleSetTags}) {
   return (
@@ -14,6 +15,11 @@ function FilteredItem({text, handleSetTags}) {
     </div>
   );
 };
+
+FilteredItem.propTypes = {
+  text: PropTypes.string.isRequired,
+  handleSetTags: PropTypes.func.isRequired
+}.isRequired;
 
 function FilterContainer({tags, handleSetTags, clearAllTags}) {
   return (
@@ -38,5 +44,12 @@ function FilterContainer({tags, handleSetTags, clearAllTags}) {
     </div>
   )
 };
+
+FilterContainer.propTypes = {
+  tags: PropTypes.array.isRequired,
+  handleSetTags: PropTypes.func.isRequired,
+  clearAllTags: PropTypes.func.isRequired
+}.isRequired;
+
 
 export { FilterContainer };

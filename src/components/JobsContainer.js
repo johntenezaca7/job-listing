@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { JobItem } from "./JobItem";
+import PropTypes from 'prop-types';
 
 const JobsContainerStyles = styled.section`
   max-width: 1100px;
@@ -24,5 +25,10 @@ function JobsContainer({jobs, handleSetTags}) {
     </JobsContainerStyles>
   );
 };
+
+JobsContainer.propTypes = {
+  jobs: PropTypes.array.isRequired,
+  handleSetTags: PropTypes.func.isRequired
+}.isRequired;
 
 export { JobsContainer };
