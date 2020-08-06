@@ -37,7 +37,7 @@ function App() {
     } else {  
       setJobs( FilterData(tags, Jobs) ); 
     }
-  }, [tags]);
+  }, [tags]); 
 
 
   return (
