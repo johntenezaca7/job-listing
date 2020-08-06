@@ -9,7 +9,7 @@ function FilterData(tags, arrObj) {
 
     return tags.every(tag => allTags.includes(tag.toLowerCase()));
   });
-} 
+}  
 
 function App() {
   const [allJobs, setJobs] = useState([]);
